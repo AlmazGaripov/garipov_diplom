@@ -27,7 +27,7 @@ body {
 /* Header */
 
 .header {
-    background-image: url(images/banner-bg-tablet.jpg);
+    background-image: url(./images/banner-bg-tablet.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
