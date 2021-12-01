@@ -11,14 +11,14 @@ body {
 
 @font-face {
     font-family: "OpenSans";
-    src: url(fonts/OpenSans-Regular.woff);
+    src: url(./fonts/OpenSans-Regular.woff);
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "OpenSans";
-    src: url(fonts/OpenSans-Bold.woff);
+    src: url(./fonts/OpenSans-Bold.woff);
     font-weight: 700;
     font-style: bold;
 }
@@ -27,7 +27,7 @@ body {
 /* Header */
 
 .header {
-    background-image: url(./images/banner-bg-tablet.jpg);
+    background-image: url(./images/banner-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -168,19 +168,19 @@ body {
 }
 
 .trend1 {
-    background-image: url(/images/trend1.jpg);
+    background-image: url(./images/trend1.jpg);
 }
 
 .trend2 {
-    background-image: url(/images/trend2.jpg);
+    background-image: url(./images/trend2.jpg);
 }
 
 .trend3 {
-    background-image: url(/images/trend3.jpg);
+    background-image: url(./images/trend3.jpg);
 }
 
 .trend4 {
-    background-image: url(/images/trend4.jpg);
+    background-image: url(./images/trend4.jpg);
 }
 
 .trends-content {
@@ -387,7 +387,7 @@ body {
 .button-search {
     border: none;
     width: 47px;
-    background-image: url(/svg/search.svg);
+    background-image: url(./svg/search.svg);
     background-repeat: no-repeat;
     background-size: 16px;
     background-position: center;
@@ -551,7 +551,7 @@ body {
 }
 
 .product-description {
-    min-height: 265px;
+    flex-grow: 1;
 }
 
 .heading-link {
@@ -620,10 +620,17 @@ body {
     background-color: #f4f7f6;
 }
 
+.social-item {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
 .social {
     list-style: none;
     display: flex;
     justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .footer-container {
@@ -638,27 +645,28 @@ body {
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: center;
-    padding: 40px 25px;
+    width: 25px;
+    height: 25px;
 }
 
 .social-icon-twitter {
-    background-image: url(/svg/004-twitter.svg);
+    background-image: url(./svg/004-twitter.svg);
 }
 
 .social-icon-pinterest {
-    background-image: url(/svg/001-pinterest.svg);
+    background-image: url(./svg/001-pinterest.svg);
 }
 
 .social-icon-facebook {
-    background-image: url(/svg/002-facebook-logo.svg);
+    background-image: url(./svg/002-facebook-logo.svg);
 }
 
 .social-icon-instagram {
-    background-image: url(/svg/005-instagram.svg);
+    background-image: url(./svg/005-instagram.svg);
 }
 
 .social-icon-tumblr {
-    background-image: url(/svg/003-tumblr.svg);
+    background-image: url(./svg/003-tumblr.svg);
 }
 
 .copyright {
@@ -682,7 +690,7 @@ body {
 @media (max-width: 1199px) {
     .header {
         padding: 50px 35px;
-        background-image: url(/images/banner-bg-tablet.jpg);
+        background-image: url(./images/banner-bg-tablet.jpg);
         background-position: center bottom;
     }
     .cardtitle-text {
@@ -727,7 +735,7 @@ body {
 @media (max-width: 768px) {
     .header {
         padding: 30px 15px;
-        background-image: url(/images/banner-mobile.jpg);
+        background-image: url(./images/banner-mobile.jpg);
         background-position: center bottom;
         margin-bottom: 40px;
     }
@@ -765,7 +773,8 @@ body {
     .main-container {
         margin-top: 50px;
     }
-    .card-news-img {
+    .card-link {
+        display: block;
         width: 100%;
     }
     .card-news-item:not(:first-child) {
@@ -798,7 +807,7 @@ body {
         flex-direction: column;
     }
     .product-description {
-        min-height: unset;
+        flex-grow: 1
     }
     .product-picture product-picture__img {
         width: 100%;
@@ -838,7 +847,7 @@ body {
 
 .link-close {
     display: block;
-    background-image: url(/svg/form-x.svg);
+    background-image: url(./svg/form-x.svg);
 }
 
 .popup-form-row {
@@ -875,7 +884,7 @@ body {
 }
 
 .select {
-    background-image: url(/svg/form-arrows.svg);
+    background-image: url(./svg/form-arrows.svg);
     background-repeat: no-repeat;
     background-size: 8px;
     background-position: center right 15px;
@@ -904,18 +913,40 @@ body {
     vertical-align: middle;
     width: 20px;
     height: 20px;
-    background-image: url(/svg/form-empty-circle.svg);
+    background-image: url(./svg/form-empty-circle.svg);
     background-position: center center;
     background-size: 20px;
     margin-right: 5px;
 }
 
 .radio:checked ~ .radio-group-text::before {
-    background-image: url(/svg/form-circle.svg)
+    background-image: url(./svg/form-circle.svg)
 }
 
 .radio {
     display: none;
+}
+
+.popup-header {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 60px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.popup-header:after {
+    content: "";
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 65px;
+    height: 3px;
+    background: #b59f5b;
 }
 
 
@@ -963,5 +994,5 @@ body {
 /* popup - switch off*/
 
 .popup-container {
-    visibility: hidden;
+    visibility: hidden
 }
